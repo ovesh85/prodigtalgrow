@@ -4,8 +4,8 @@ Pages: index.html (Home), linkedin-profile-management.html, meta-ads.html,
 product-video.html, digital-marketing.html. Shared styles and scripts are in assets/.
 
 Replace these placeholders before going live:
-1. WhatsApp number and email: assets/main.js, CONFIG at the top (one place for all pages).
-2. Phone number in the footer: search each page for "+91 99999 99999" / "tel:+919999999999".
+1. WhatsApp number (+91 99132 98992) and email: assets/main.js, CONFIG at the top (one place for all pages).
+2. Footer phone is already set to +91 99132 98992 (search each page for "tel:+919913298992").
 3. Founder photo: add assets/img/tushar-panchal.jpg (portrait, about 800x1000).
    Until you add it, the page shows a "TP" initials placeholder.
 4. Social links in the footer (href="#").

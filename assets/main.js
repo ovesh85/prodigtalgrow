@@ -2,7 +2,7 @@
 (function () {
   /* ===== EDIT THESE CONTACT DETAILS (placeholders) ===== */
   var CONFIG = {
-    whatsapp: "919999999999",          // country code + number, no "+" or spaces
+    whatsapp: "919913298992",          // country code + number, no "+" or spaces
     email: "hello@prodigitalgrow.com"
   };
   /* ====================================================== */
@@ -70,9 +70,13 @@
         lines.push((label ? label.textContent.replace("*", "").trim() : f.name) + ": " + f.value);
       });
       var url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
+      // Open WhatsApp straight away (inside the click, so browsers don't block it)
+      var win = window.open(url, "_blank", "noopener");
       var ok = form.querySelector(".form-ok");
       if (ok) {
-        ok.innerHTML = 'Thanks! <a href="' + url + '" target="_blank" rel="noopener" style="text-decoration:underline">Tap here to send your details on WhatsApp</a> and we\'ll reply shortly.';
+        ok.innerHTML = win
+          ? 'Thanks! WhatsApp has opened with your details. Press send and we\'ll reply shortly. <a href="' + url + '" target="_blank" rel="noopener" style="text-decoration:underline">Didn\'t open? Tap here.</a>'
+          : 'Thanks! <a href="' + url + '" target="_blank" rel="noopener" style="text-decoration:underline">Tap here to send your details on WhatsApp</a> and we\'ll reply shortly.';
         ok.style.display = "block";
       }
       form.reset();
