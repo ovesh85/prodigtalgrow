@@ -2,7 +2,7 @@
 (function () {
   /* ===== EDIT THESE CONTACT DETAILS (placeholders) ===== */
   var CONFIG = {
-    whatsapp: "919913298992",          // country code + number, no "+" or spaces
+    whatsapp: "918460669760",          // country code + number, no "+" or spaces
     email: "hello@prodigitalgrow.com"
   };
   /* ====================================================== */
