@@ -350,3 +350,77 @@ section{padding:88px 0}
 .wa-float{animation:pulse 2.6s ease-out infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 @media (prefers-reduced-motion:reduce){.wa-float{animation:none}}
+
+/* =========================================================
+   Light theme: white header, light hero, light sections.
+   Matches the logo's white background; navy stays for text.
+   ========================================================= */
+:root{--line-dark:rgba(15,23,42,.10);--tint:#F3F5FF}
+.site-header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);box-shadow:0 6px 24px -18px rgba(10,18,51,.35)}
+.logo{background:transparent;padding:0;border-radius:0}
+.logo img{height:50px}
+.menu>li>a{color:var(--ink)}
+.menu>li>a:hover,.menu>li>a.active{color:var(--accent-ink)}
+.dropdown{border:1px solid var(--line)}
+.burger{color:var(--ink)}
+.btn-ghost{border-color:#CBD5E1;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--orange);background:var(--orange-soft);color:var(--accent-ink)}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#F1F4FF 0%,#FFFFFF 100%);color:var(--body)}
+.hero::before{background:
+  radial-gradient(700px 380px at 88% 0%,rgba(59,91,234,.14),transparent 62%),
+  radial-gradient(520px 320px at 60% 110%,rgba(139,36,216,.10),transparent 62%),
+  radial-gradient(600px 400px at 0% 100%,rgba(34,167,240,.12),transparent 62%)}
+.hero::after{background-image:linear-gradient(rgba(10,18,51,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(10,18,51,.035) 1px,transparent 1px)}
+.hero h1,.hero-card h4,.hstat b{color:var(--ink)}
+.hero .hl,.bg-dark .hl,.cta .hl{background-image:linear-gradient(90deg,#2E3FD8,#5B3DDB 55%,#9A1FD0)}
+.hero p.lead{color:var(--body)}
+.eyebrow,.crumbs,.hstat span{color:var(--muted)}
+.crumbs a:hover{color:var(--accent-ink)}
+.hero-card{background:#fff;border:1px solid var(--line);box-shadow:0 24px 50px -28px rgba(59,91,234,.35);backdrop-filter:none}
+.checks li{color:var(--body)}
+.hero-stats{border-top:1px solid var(--line)}
+.hstat b{background:none;-webkit-text-fill-color:currentColor}
+
+/* formerly dark sections */
+.bg-dark{background:var(--tint);color:var(--body)}
+.bg-dark h2,.bg-dark h3,.bg-dark h4{color:var(--ink)}
+.bg-dark .sec-head p,.bg-dark .card p,.bg-dark .card li,.result p,.note{color:var(--muted)}
+.bg-dark .card,.tile,.result{background:#fff;border-color:var(--line)}
+.bg-dark .card .ic{background:var(--orange-soft);color:var(--accent-ink)}
+.bg-dark .kicker,.cta .kicker{color:var(--accent-ink)}
+.tile{color:var(--ink)}
+.tile:hover{background:var(--orange-soft);border-color:var(--orange)}
+.result b.big{background:linear-gradient(90deg,#2E3FD8,#9A1FD0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.result h4{color:var(--ink)}
+.result .chip{background:var(--orange-soft);color:var(--accent-ink)}
+.bg-dark .chips span{background:#fff;border-color:var(--line);color:var(--ink)}
+
+/* contact / CTA band */
+.cta{background:linear-gradient(180deg,#F1F4FF,#EAEEFF)}
+.cta::before{background:radial-gradient(700px 400px at 0% 0%,rgba(59,91,234,.12),transparent 60%),radial-gradient(500px 320px at 100% 100%,rgba(139,36,216,.10),transparent 60%)}
+.cta h2,.cta h3,.perks span{color:var(--ink)}
+.cta p{color:var(--body)}
+.badge{background:#fff;border:1px solid #D9DEFA;color:var(--accent-ink)}
+.form{border:1px solid var(--line)}
+
+/* footer */
+.site-footer{background:#F3F5FB;color:var(--muted);border-top:1px solid var(--line)}
+.site-footer h5{color:var(--ink)}
+.site-footer a:hover{color:var(--accent-ink)}
+.socials a{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.socials a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.foot-bottom{border-top-color:var(--line)}
+
+@media (max-width:900px){
+  .site-header{background:#fff}
+  .menu{background:#fff}
+  .menu>li{border-bottom:1px solid var(--line)}
+  .dropdown{background:var(--tint)}
+  .dropdown a,.dropdown b{color:var(--ink)}
+  .dropdown span span{color:var(--muted)}
+  .dropdown a:hover{background:#fff}
+  .menu>li>a.active{color:var(--accent-ink)}
+}
+@media (max-width:620px){.logo img{height:40px}}
