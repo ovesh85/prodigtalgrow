@@ -13,4 +13,4 @@ Replace these placeholders before going live:
    To email the enquiry instead, add action="your-endpoint" to the <form>,
    or swap the form for Contact Form 7 / WPForms in WordPress.
 
-Brand files (logo SVGs, favicon) are in assets/img/.
+Brand files (logo PNGs, favicon) are in assets/img/.
