@@ -7,12 +7,21 @@
   };
   /* ====================================================== */
 
+  // Analytics events (Google Tag Manager dataLayer + Meta Pixel)
+  function track(name, fbEvent) {
+    try {
+      (window.dataLayer = window.dataLayer || []).push({ event: name, page_path: location.pathname });
+      if (window.fbq && fbEvent) window.fbq("track", fbEvent);
+    } catch (e) {}
+  }
+
   // WhatsApp links
   document.querySelectorAll("[data-wa]").forEach(function (a) {
     var msg = a.getAttribute("data-wa") || "Hi ProDigitalGrow, I'd like to discuss my marketing.";
     a.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg);
     a.target = "_blank";
     a.rel = "noopener";
+    a.addEventListener("click", function () { track("whatsapp_click", "Contact"); });
   });
   document.querySelectorAll("[data-email]").forEach(function (a) {
     a.href = "mailto:" + CONFIG.email;
@@ -71,6 +80,7 @@
       });
       var url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
       // Open WhatsApp straight away (inside the click, so browsers don't block it)
+      track("generate_lead", "Lead");
       var win = window.open(url, "_blank", "noopener");
       var ok = form.querySelector(".form-ok");
       if (ok) {

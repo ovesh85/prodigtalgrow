@@ -70,7 +70,7 @@ h1,h2,h3,h4{color:var(--ink);line-height:1.15;letter-spacing:-.02em;font-weight:
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding-top:88px;padding-bottom:56px}
 .eyebrow{display:inline-flex;flex-wrap:wrap;gap:10px;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#94A3B8}
 .eyebrow i{font-style:normal;color:var(--cta)}
-.hero h1{color:#fff;font-size:clamp(2.3rem,5vw,3.9rem);margin:18px 0 18px}
+.hero h1{color:#fff;font-size:clamp(2rem,4vw,3.1rem);margin:18px 0 18px}
 .hero p.lead{font-size:1.1rem;max-width:600px;color:#CBD5E1}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 .hero-card{background:rgba(255,255,255,.06);border:1px solid var(--line-dark);border-radius:20px;padding:26px;backdrop-filter:blur(10px)}
